@@ -1,0 +1,159 @@
+.Board {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Board-container{
+  width: 100%;
+}
+
+.Board-table{
+  align-content: center;
+  margin: auto;
+/*   border-radius: 10px;
+  overflow: hidden; */
+  border-collapse: collapse;
+  box-shadow: -5px -5px 30px 5px rgba(0, 255, 255, .5),
+  5px 5px 30px 5px rgba(0, 255, 255, .5);
+}
+
+/* .Board-table tr:first-child td:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+.Board-table tr:first-child td:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+.Board-table tr:last-child td:first-child {
+  border-radius: 0 0 0 10px;
+}
+
+.Board-table tr:last-child td:last-child {
+  border-radius: 0 0 10px 0;
+} */
+
+.Board-table table{
+  border-radius: 100px;
+}
+
+.Board-table tr{
+  border-radius: 5px;
+}
+
+.Board-table tr, td{
+  border: 2px solid #00ffff;
+}
+
+.Board-win p {
+  font-size: 60px;
+  color: #f4f4f4;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #aaa, 0 0 10px #aaa, 
+  0 0 1.5px #aaa, 0 0 2px #00ffff, 
+  0 0 3px #00ffff, 0 0 4px #00ffff, 
+  0 0 5px #00ffff, 0 0 7px #00ffff;
+  font-weight: bold;
+  animation: flux 2s linear infinite;
+}
+
+.Board-win button {
+  outline: none;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: #00b2b2;
+  font-size: 20px;
+  border: 2px solid #f4f4f4;
+}
+
+.Board-win button:hover {
+  background-color: #00e5e5;
+  border: 2px solid #f5f5f5;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 5px #929292, 0 0 10px #929292, 
+    0 0 3px #929292, 0 0 4px #00e5e5, 
+    0 0 6px #00e5e5, 0 0 8px #00e5e5, 
+    0 0 10px #00e5e5, 0 0 14px #00e5e5;
+    color: #dadada;
+  }
+  50% {
+    text-shadow: 0 0 5px #7a7a7a, 0 0 10px #7a7a7a, 
+    0 0 1.5px #7a7a7a, 0 0 2px #00cccc, 
+    0 0 3px #00cccc, 0 0 4px #00cccc, 
+    0 0 5px #00cccc, 0 0 7px #00cccc;
+    color: #cdcdcd;
+  }
+}
+
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+.Board-neon-flux {
+  align-self: center;
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.Board-neon {
+  font-family: neon;
+  color: #FB4264;
+  font-size: 6vw;
+  line-height: 6vw;
+  text-shadow: 0 0 3vw #F40A35;
+}
+
+.Board-flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 6vw;
+  line-height: 6vw;
+  text-shadow: 0 0 3vw #2356FF;
+}
+
+.Board-neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+
+.Board-flux{
+  animation: flux2 2s linear infinite;
+  -moz-animation: flux2 2s linear infinite;
+  -webkit-animation: flux2 2s linear infinite;
+  -o-animation: flux2 2s linear infinite;
+}
+
+@keyframes flux2 {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
